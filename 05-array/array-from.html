@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<ul>
+		<li>Tony</li>
+		<li>Steve</li>
+		<li>Scott</li>
+	</ul>
+
+	<script>
+		
+	// const name = 'Fernando';
+	// console.log(Array.from(name));
+
+	const list = document.querySelectorAll('ul>li');
+	const listArr = Array.from(list);
+	console.log(listArr);
+
+	const names = listArr.map(item => item.textContent);
+
+	console.log(names);
+
+	</script>
+
+</body>
+</html>
