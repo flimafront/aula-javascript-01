@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	
+	.blue {
+		color: blue;
+		font-family: sans-serif;
+		font-size: 20px;
+		font-weight: 500;
+	}
+
+</style>
+
+</head>
+<body>
+
+	<script>
+
+		const person = {
+			name: 'Fernando',
+			age: 28
+		}
+
+		function taggedTemplate(template, ...values) {
+			console.log(template);
+			console.log(values);
+
+			return template.reduce((accumulator, part, i) => {
+				return `
+					${accumulator}
+					<span class="blue">${values[i - 1]}</span>
+					${part}
+				`
+			})
+
+		}
+		
+		const tagged = taggedTemplate`Olá eu sou ${person.name}, minha idade é ${person.age}`
+
+		document.body.innerHTML = tagged;
+
+	</script>
+
+</body>
+</html>

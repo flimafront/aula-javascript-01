@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<button id="btn">Click me</button>
+
+	<script>
+		
+	const btn = document.getElementById('btn');
+
+	// btn.addEventListener('click', function() {
+	// 	console.log(this);
+	// })
+
+	var sandwich = {
+		bread: 'white',
+		cheese: 'cheddar',
+
+		prepare: function() {
+			return `Seu lanche com pão ${this.bread} e queijo ${this.cheese}`
+		},
+
+		food: function() {
+			window.setTimeout(() => {
+				console.log(this.prepare())
+			}, 500)
+		}
+	}
+
+	btn.addEventListener('click', () => {
+		this.sandwich.food();
+	})
+
+	</script>
+
+</body>
+</html>

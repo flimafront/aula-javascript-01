@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<script>
+		
+	const article = {
+		title: 'Título da notícia',
+		subtitle: 'Lorem ipsum',
+		body: 'Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum',
+		author: 'Fernando'
+	};
+
+	function author(name) {
+		return (name) ? name : 'unknow';
+	}
+
+	const body = `
+		<header>
+			<h1>${article.title}</h1>
+			<h3>${article.subtitle}</h3>
+		</header>
+		<article>
+			<p>${article.body}</p>
+		</article>
+		<footer>
+			<li>${author(article.author)}</li>
+		</footer>
+	`
+
+	document.body.innerHTML = body;
+
+
+	</script>
+
+</body>
+</html>

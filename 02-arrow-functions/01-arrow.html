@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		
+	const arr = ['React', 'Angular', 'Vue'];
+
+	const newArr = arr.map(function(item) {
+		return `I love ${item}`;
+	});
+
+	const newArrow = arr.map((item) => {
+		return `I love ${item}`;
+	});
+
+	const newArrow2 = arr.map(item => {
+		return `I love ${item}`;
+	});
+
+	const newArrow3 = arr.map(item => `I love ${item}`);
+
+
+	console.log(newArrow);
+	console.log(newArrow2);
+	console.log(newArrow3);
+	console.log(newArr);
+
+	</script>
+
+</body>
+</html>
