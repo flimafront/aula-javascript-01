@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		
+	function* getNames() {
+		yield "Fernando";
+		yield "John";
+		yield "Steve";
+	}
+
+	const name = getNames();
+
+	console.log(name.next());
+	console.log(name.next());
+	console.log(name.next());
+	console.log(name.next());
+
+	</script>
+
+</body>
+</html>

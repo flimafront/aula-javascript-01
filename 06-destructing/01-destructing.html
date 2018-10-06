@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	
+const person = {
+	name: 'Fernando',
+	lastName: 'Lima',
+	age: 28,
+	social: {
+		facebook: 'flima',
+		twitter: '@flima'
+	}
+};
+
+/*//old
+const name = person.name;
+const lastName = person.lastName;*/
+
+//new
+const { name, lastName } = person;
+
+const { facebook, twitter } = person.social;
+
+const { facebook: fb } = person.social;
+
+const { job = 'Developer' } = person;
+
+
+
+console.log(name);
+console.log(lastName);
+console.log(facebook);
+console.log(twitter);
+console.log(fb);
+console.log(job);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		
+		const txt = 'Univem';
+		const it = txt[Symbol.iterator]();
+
+		// console.log(it.next());
+		// console.log(it.next());
+		// console.log(it.next());
+		// console.log(it.next());
+		// console.log(it.next());
+		// console.log(it.next());
+		// console.log(it.next());
+
+		for(letter of it) {
+			console.log(letter);
+			if(letter === 'v') break;
+		}
+
+	</script>
+
+</body>
+</html>

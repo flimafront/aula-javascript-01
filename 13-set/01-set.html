@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	
+const mySet = new Set(['tony', 'steve', 'logan']);
+
+mySet.add('bruce');
+mySet.add('james');
+mySet.add('billy');
+
+mySet.delete('bruce');
+
+console.log(mySet);
+console.log(mySet.has('bruce'));
+
+const it = mySet[Symbol.iterator]();
+
+for(name of it) {
+	console.log(name);
+}
+
+
+</script>
+
+</body>
+</html>

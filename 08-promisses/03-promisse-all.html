@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+ 	<script>
+ 		
+ 	var currency = new Promise((resolve, reject) => {
+ 		setTimeout(() => {
+ 			resolve({"currency": 'euro', "value": 4.70});
+ 		}, 3000)
+ 	})
+
+ 	var countries = new Promise((resolve, reject) => {
+ 		setTimeout(() => {
+ 			resolve(["England", 'Ireland', "Germany"]);
+ 		}, 500)
+ 	})
+
+ 	Promise
+ 		// tem all e race - all espera tudo, race o primeiro que vir para
+ 		.all([currency, countries])
+ 		.then(data => console.log(data));
+
+ 	</script>
+
+</body>
+</html>

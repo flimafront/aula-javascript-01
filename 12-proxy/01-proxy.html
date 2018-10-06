@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		
+	const person = {
+		name: 'Fernando',
+		age: 28
+	}
+
+	console.log(person);
+
+	const proxy = new Proxy(person, {
+		get(target, name) {
+			console.log(`alguem está pedindo ${name}`);
+			return target[name];
+		},
+		set(target, name, value) {
+			console.log(`Alguem esta alterando ${name}`);
+			target[name] = value;
+		}
+	})
+
+	</script>
+
+</body>
+</html>

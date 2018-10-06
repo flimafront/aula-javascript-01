@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<script>
+		
+	const weakmap = new WeakMap();
+
+	let obj = {
+		name: 'Luan',
+		age: 28
+	}
+
+	weakmap.set(obj, 'Informações do Fernando');
+	console.log(weakmap);
+
+	const People = (function() {
+		var data = new WeakMap();
+
+		function People(name) {
+			data.set(this, { name: name })
+		}
+
+		People.prototype.getName = function() {
+			return data.get(this).name;
+		};
+
+		return People;
+
+	}());
+
+	const people = new People('Fernando');
+
+	console.log(people.name);
+	console.log(people.getName());
+
+	</script>
+
+</body>
+</html>

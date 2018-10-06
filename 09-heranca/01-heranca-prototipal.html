@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		
+		function animal(kind, sound) {
+			this.kind = kind;
+			this.sound = sound;
+		}
+
+		animal.prototype.eat = function() {
+			console.log(`${this.sound} estou comendo`)
+		}
+
+		var dog = new animal('vira-lata', 'auau');
+
+		//var dog = new Animal('vira-lata', 'auau');
+		
+	</script>
+
+</body>
+</html>

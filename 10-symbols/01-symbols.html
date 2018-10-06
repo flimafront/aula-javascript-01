@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		
+	let symbols = Symbol('name');
+	console.log(symbols);
+
+	let symbol2 = Symbol('name');
+
+	console.log(symbols === symbol2);
+
+	let person = {
+		[Symbol('name')]: 'Luan',
+		[Symbol('age')]: 28,
+		city: 'Marília'
+	}
+
+	console.log(person)
+
+	const symbolName = Object.getOwnPropertySymbols(person).map((sym) => person[sym]);
+
+	console.log(symbolName);
+
+	</script>
+
+</body>
+</html>

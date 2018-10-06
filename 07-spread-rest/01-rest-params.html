@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+
+//old	
+// function mult(num, arg1, arg2, arg3) {
+// 	let arr = [];
+// 	arr.push(num * arg1);
+// 	arr.push(num * arg2);
+// 	arr.push(num * arg3);
+// 	return arr;
+// }
+
+
+function mult(num, ...args) {
+	return args.map(i => num * i);
+}
+
+
+const multiply = mult(2, 1, 2, 3, 4, 67, 2)
+console.log(multiply);
+
+</script>
+
+</body>
+</html>

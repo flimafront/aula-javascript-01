@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	
+	var defer = new Promise((resolve, reject) => {
+		setTimeout(() => {
+			if(true) {
+				resolve('Olá, sua promessa foi excecutada com sucesso!');
+			} else {
+				reject('Desculpe, não foi dessa vez!');
+			}
+		}, 3000)
+	})
+
+	defer
+		.then((data) => console.log(data))
+		.catch((error) => console.log(error))
+
+</script>
+
+</body>
+</html>

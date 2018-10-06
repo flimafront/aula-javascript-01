@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		
+	var sw = fetch('https://swapi.co/api/films?format=json');
+
+
+	sw
+  	.then((data) => data.json())
+	.then((data) => data.results)
+	.then((data) => data.map(item => item.title))
+	.then((data) => console.log(data))
+	.catch((error) => console.log(error))
+
+	</script>
+
+</body>
+</html>

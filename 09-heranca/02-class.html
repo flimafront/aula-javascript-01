@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	
+class Animal {
+	constructor(kind, sound) {
+		this.kind = kind;
+		this.sound = sound;
+	}
+
+	eat() {
+		console.log(`${this.sound} estou comendo`);
+	}
+
+	static info() {
+		console.log('este método da minha classe Animal')
+	}
+
+	get name() {
+		console.log("Meu nome é Jake!");
+	}
+
+	set nickname(nick) {
+		this.nick = nick;
+	}
+
+}
+
+var animal = new Animal('dog', 'auau');
+console.log(animal.kind);
+console.log(animal.sound);
+
+</script>
+
+</body>
+</html>
